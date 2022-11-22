@@ -25,6 +25,6 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: .
+          context: airflow
           push: true
           tags: ${{ env.REGISTRY }}/${{ github.actor }}/airflow:latest
