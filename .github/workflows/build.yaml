@@ -30,8 +30,7 @@ jobs:
           separator: " "
           autocrlf: "input"
           files: |
-             ${{ matrix.context }}
-             .github
+             ${{ matrix.context }} .github
 
       - name: Login to Docker ghcr
         if: steps.verify-changed-files.outputs.files_changed == 'true'
