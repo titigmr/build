@@ -5,7 +5,7 @@ ENV config_path=config/postgres/sample_tpcc_config.xml
 RUN \
     apt update -qy && \
     # some packages are installed for debug
-    apt install -qy sudo git ca-certificates-java vim iproute2 curl openjdk-19-jre && \
+    apt install -qy sudo git ca-certificates-java vim iproute2 curl openjdk-19-jre 
     #useradd -ms /bin/bash cmu
 WORKDIR /home/cmu
 RUN chgrp -R 0 /home/cmu && chmod -R g=u /home/cmu 
