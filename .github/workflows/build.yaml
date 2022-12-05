@@ -33,7 +33,7 @@ jobs:
              ${{ matrix.context }} .github
 
       - name: Login to Docker ghcr
-        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        #if: steps.verify-changed-files.outputs.files_changed == 'true'
         uses: docker/login-action@v2
         with:
           registry: ${{ env.REGISTRY }}
@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push
-        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        #if: steps.verify-changed-files.outputs.files_changed == 'true'
         uses: docker/build-push-action@v3
         with:
           context: ${{ matrix.context }}
